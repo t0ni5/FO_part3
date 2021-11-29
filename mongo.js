@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-if (process.argv.length < 5 && process.argv.length > 3 ) {
+if (process.argv.length < 5 && process.argv.length > 3) {
   console.log('Please provide password, name and number as arguments: node mongo.js <password> <name> <number>')
   process.exit(1)
 }
@@ -23,7 +23,7 @@ if (process.argv.length === 3) {
   Person.find({}).then(result => {
     console.log('phonebook:')
     result.forEach(person => {
-      console.log(person.name + " " + person.number)
+      console.log(person.name + ' ' + person.number)
     })
     mongoose.connection.close()
   })
